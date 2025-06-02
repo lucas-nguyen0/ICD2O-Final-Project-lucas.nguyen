@@ -1,0 +1,31 @@
+/* Created by: Lucas Nguyen
+* Created on: Jun 2025
+* This file contains the CSS for index.html
+*/
+.mdl-layout__content {
+  padding-left: 15pt;
+  padding-right: 15pt;
+  padding-top: 15pt;
+}
+
+/* Due to error in MDL : https://github.com/google/material-design-lite/issues/5281
+*/
+.mdl-ripple {
+  background: pink;
+  opacity: 0.001;
+}
+
+body {
+  background-color: rgb(234, 194, 223);
+}
+
+p {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  padding-top: 5pt;
+}
+
+.mdl-button {
+    height: 100px;
+}
