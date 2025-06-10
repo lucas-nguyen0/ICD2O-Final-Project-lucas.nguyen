@@ -17,7 +17,7 @@ let msSinceColorSwitch = 0
 let waitingForClick = false
 let waitingForPlay = true
 let colorSwitchTimeout = null
-
+let bestScore = Infinity
 
 // on click to start
 function play() {
@@ -52,21 +52,24 @@ clickArea.addEventListener("click", function () {
     const score = Date.now() - msSinceColorSwitch
     waitingForClick = false
     waitingForPlay = true
+    if (score < bestScore) {
+      bestScore = score
+    }
     if (score >= 450) {
       document.getElementById("display-text").innerHTML =
-        "Your time was " + score + "ms. Click again! <br/><img src='./images/1-star.png'>"
+        "Your time was " + score + "ms. Click again! <br/>Best Score: " + bestScore + "ms<br/><br/><img src='./images/1-star.png'>"
     } else if (score > 400) {
       document.getElementById("display-text").innerHTML =
-        "Your time was " + score + "ms. Click again! <br/><img src='./images/2-star.png'>"
+        "Your time was " + score + "ms. Click again! <br/>Best Score: " + bestScore + "ms<br/><br/><img src='./images/2-star.png'>"
     } else if (score > 325) {
       document.getElementById("display-text").innerHTML =
-        "Your time was " + score + "ms. Click again! <br/><img src='./images/3-star.png'>"
-    } else if (score > 275) {
+        "Your time was " + score + "ms. Click again! <br/>Best Score: " + bestScore + "ms<br/><br/><img src='./images/3-star.png'>"
+    } else if (score > 290) {
       document.getElementById("display-text").innerHTML =
-        "Your time was " + score + "ms. Click again! <br/><img src='./images/4-star.png'>"
+        "Your time was " + score + "ms. Click again! <br/>Best Score: " + bestScore + "ms<br/><br/><img src='./images/4-star.png'>"
     } else {
       document.getElementById("display-text").innerHTML =
-        "Your time was " + score + "ms. Click again! <br/><img src='./images/5-star.png'>"
+        "Your time was " + score + "ms. Click again! <br/>Best Score: " + bestScore + "ms<br/><br/><img src='./images/5-star.png'>"
     }
   } else {
     play()
