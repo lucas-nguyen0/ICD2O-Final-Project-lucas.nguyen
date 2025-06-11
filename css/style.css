@@ -5,8 +5,8 @@
 
 #app {
   display: flex;
-  width: 1425px;
-  height: 795px;
+  padding: 20px 20px;
+  height: 700px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
 }
