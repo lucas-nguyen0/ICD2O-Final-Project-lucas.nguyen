@@ -7,8 +7,6 @@
 'use strict'
 
 const clickArea = document.getElementById('click-area')
-const displayText = document.getElementById('display-text')
-const starImage = ''
 
 const MIN_MS_UNTIL_CHANGE = 3000
 const MAX_MS_UNTIL_CHANGE = 7000
