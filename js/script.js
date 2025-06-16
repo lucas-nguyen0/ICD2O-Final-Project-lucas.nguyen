@@ -29,9 +29,11 @@ clickArea.addEventListener('click', function () {
     const score = Date.now() - msSinceColorSwitch
     waitingForClick = false
     waitingForPlay = true
+    // find best time
     if (score < bestScore) {
       bestScore = score
     }
+    // show score
     if (score >= 400) {
       document.getElementById('display-text').innerHTML =
         'Your time was ' + score + 'ms. Click again! <br/>Best Score: ' + bestScore + "ms<br/><br/><img src='./images/1-star.png'>"
