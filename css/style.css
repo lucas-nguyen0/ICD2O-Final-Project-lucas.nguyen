@@ -1,0 +1,28 @@
+/* Created by: Lucas Nguyen
+* Created on: Jun 2025
+* This file contains the CSS for index.html
+*/
+
+#app {
+  display: flex;
+  padding: 30px 20px;
+  height: 650px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+#click-area {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  background-color: red;
+  cursor: pointer;
+}
+
+#display-text {
+  padding: 16px;
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+}
