@@ -29,19 +29,21 @@ clickArea.addEventListener('click', function () {
     const score = Date.now() - msSinceColorSwitch
     waitingForClick = false
     waitingForPlay = true
+    // find best time
     if (score < bestScore) {
       bestScore = score
     }
-    if (score >= 500) {
+    // show score
+    if (score >= 400) {
       document.getElementById('display-text').innerHTML =
         'Your time was ' + score + 'ms. Click again! <br/>Best Score: ' + bestScore + "ms<br/><br/><img src='./images/1-star.png'>"
-    } else if (score > 400) {
-      document.getElementById('display-text').innerHTML =
-        'Your time was ' + score + 'ms. Click again! <br/>Best Score: ' + bestScore + "ms<br/><br/><img src='./images/2-star.png'>"
     } else if (score > 350) {
       document.getElementById('display-text').innerHTML =
-        'Your time was ' + score + 'ms. Click again! <br/>Best Score: ' + bestScore + "ms<br/><br/><img src='./images/3-star.png'>"
+        'Your time was ' + score + 'ms. Click again! <br/>Best Score: ' + bestScore + "ms<br/><br/><img src='./images/2-star.png'>"
     } else if (score > 300) {
+      document.getElementById('display-text').innerHTML =
+        'Your time was ' + score + 'ms. Click again! <br/>Best Score: ' + bestScore + "ms<br/><br/><img src='./images/3-star.png'>"
+    } else if (score > 260) {
       document.getElementById('display-text').innerHTML =
         'Your time was ' + score + 'ms. Click again! <br/>Best Score: ' + bestScore + "ms<br/><br/><img src='./images/4-star.png'>"
     } else {
